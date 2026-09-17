@@ -52,3 +52,14 @@ A small struct added is the total amount of space saved over the total runs done
     typedef struct {
         SpaceSaved* originalSize, *finalSize;
     } Paket;
+
+For user inputs, there is a cache implemented so that the user does not need to input the same choice multiple times, and they will only be prompted to input if there is no match
+
+below is the cache struct
+
+    struct Cache {
+        struct Medium** vid, **audio;
+        struct Subtitle** subtitle;
+        unsigned int VidSize, AudioSize, SubtitleSize;
+    };
+Stores pointers to the video, audio, or subtitle stream, usually the first episode, unless there was not a match then, from any episode.

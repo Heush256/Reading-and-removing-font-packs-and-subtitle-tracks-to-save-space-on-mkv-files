@@ -28,7 +28,7 @@ Hierarchy of structs meant to encapsulate information contained in an episode (b
         char* ShowName;
         unsigned int VidAmount, AudiosAmount, SubtitleAmount;
     } Episode;
-Each episode of mkv files can contain multiple video, audio, and subtitle streams, and multiple font packs.
+Each episode of mkv files can contain multiple video, audio, and subtitle streams, and multiple font packs. The boolean variable in the attachment struct checks if the font pack is default on windows, and if so, proceeds to remove it too. The booleans in the higher structs, while not implemented yet, is for when the inputs "*" for default choice.
 
 A small struct added is the total amount of space saved over the total runs done for curiosity. It takes the difference between all of the episodes, and then sums them up at the end of the program, then stores the value into a file.
 

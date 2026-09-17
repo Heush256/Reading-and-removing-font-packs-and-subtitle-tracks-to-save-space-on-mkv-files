@@ -63,3 +63,5 @@ below is the cache struct
         unsigned int VidSize, AudioSize, SubtitleSize;
     };
 Stores pointers to the video, audio, or subtitle stream, usually the first episode, unless there was not a match then, from any episode.
+
+Creates dynamic command line for mkvtoolnix turning the pos of the font packs in the files, subtitles, and audios into strings in the command line.
